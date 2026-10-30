@@ -15,7 +15,7 @@
             --border-color: #1f2937;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
@@ -23,7 +23,7 @@
             padding: 40px 20px;
         }
         .container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
             background-color: var(--container-bg);
             padding: 40px;
@@ -48,72 +48,32 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 35px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 15px;
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
-        .tab-btn {
-            background: #1f2937;
-            color: var(--text-muted);
-            border: 1px solid var(--border-color);
-            padding: 10px 25px;
-            font-size: 1rem;
-            font-weight: bold;
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        .col {
+            background: #1f293750;
+            padding: 20px;
             border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .tab-btn:hover {
-            color: #fff;
-            border-color: var(--primary);
-        }
-        .tab-btn.active {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff;
-            border: none;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-        .lang-content {
-            display: none;
-        }
-        .lang-content.active {
-            display: block;
+            border: 1px solid var(--border-color);
         }
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #fff;
-            margin-top: 35px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
+            padding-bottom: 5px;
+            margin-top: 20px;
         }
-        p, li {
-            font-size: 1.05rem;
-            color: var(--text-main);
-            text-align: justify;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        a:hover {
-            color: var(--accent);
-            text-decoration: underline;
-        }
-        .effective-date {
-            font-style: italic;
-            color: var(--text-muted);
-            margin-top: 25px;
-        }
+        h2:first-of-type { margin-top: 0; }
+        p, li { font-size: 0.95rem; color: var(--text-main); text-align: justify; }
+        ul { padding-left: 20px; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--accent); text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -122,32 +82,48 @@
     <h1>Super IA Superintelligence</h1>
     <div class="subtitle">Política de Privacidad / Privacy Policy</div>
 
-    <div class="tabs">
-        <button class="tab-btn active" onclick="switchLanguage('es')">Español</button>
-        <button class="tab-btn" onclick="switchLanguage('en')">English</button>
-    </div>
+    <div class="grid">
+        <!-- COLUMNA EN ESPAÑOL -->
+        <div class="col">
+            <h2>1. Aplicación y Alcance</h2>
+            <p>Esta política se aplica a la aplicación Super IA Superintelligence para móviles, Windows y navegadores web operada por <strong>JASM30</strong> (el "Proveedor de servicios").</p>
 
-    <!-- CONTENIDO EN ESPAÑOL -->
-    <div id="content-es" class="lang-content active">
-        <p>Esta política de privacidad se aplica a la aplicación Super IA Superintelligence operada por JASM30. Puedes encontrar los detalles completos sobre recopilación de información, uso de cookies, derechos del usuario (incluyendo CCPA), protección de menores y seguridad en el código fuente o contactando a <a href="mailto:jose.angb4@gmail.com">jose.angb4@gmail.com</a>.</p>
-        <p class="effective-date">Esta política de privacidad es efectiva a partir del 30-10-2026.</p>
-    </div>
+            <h2>2. Recopilación de Información</h2>
+            <p>La aplicación recopila datos automáticamente al usarla, incluyendo: dirección IP, páginas visitadas, fecha/hora y sistema operativo usado.</p>
 
-    <!-- CONTENIDO EN INGLÉS -->
-    <div id="content-en" class="lang-content">
-        <p>This privacy policy applies to the Super IA Superintelligence application operated by JASM30. You can find full details regarding information collection, cookies, user rights (including CCPA), children's privacy, and security in the source code or by contacting <a href="mailto:jose.angb4@gmail.com">jose.angb4@gmail.com</a>.</p>
-        <p class="effective-date">This privacy policy is effective as of 2026-10-30.</p>
+            <h2>3. Cookies y Terceros</h2>
+            <p>Se pueden utilizar cookies o SDKs de terceros (como los Servicios de Google Play) para soporte y análisis. Se compartirá información agregada y anonimizada para mejorar el servicio.</p>
+
+            <h2>4. Sus Derechos y Opt-Out</h2>
+            <p>Puede solicitar el acceso, corrección o eliminación de sus datos escribiendo a <a href="mailto:jose.angb4@gmail.com">jose.angb4@gmail.com</a>. Para detener la recopilación de datos por completo, desinstale la aplicación o deje de utilizar el sitio web.</p>
+
+            <h2>5. Retención y Menores</h2>
+            <p>Los datos provistos por el usuario se guardan mientras use la app y hasta 12 meses después. La aplicación no está destinada a menores de 16 años sin consentimiento parental.</p>
+
+            <p><em>Vigencia: 2026-10-30</em></p>
+        </div>
+
+        <!-- COLUMNA EN INGLÉS -->
+        <div class="col">
+            <h2>1. Application and Scope</h2>
+            <p>This privacy policy applies to the Super IA Superintelligence application for mobile devices, Windows, and web browsers operated by <strong>JASM30</strong> (the "Service Provider").</p>
+
+            <h2>2. Information Collection</h2>
+            <p>The Application collects information automatically upon download/use, including: Internet Protocol (IP) address, pages visited, time/date, and your operating system.</p>
+
+            <h2>3. Cookies and Third-Parties</h2>
+            <p>The application or third-party SDKs (such as Google Play Services) may use cookies or pixels for functionality. Only aggregated, anonymized data is periodically transmitted to external services.</p>
+
+            <h2>4. Your Rights and Opt-Out</h2>
+            <p>You can request access, correction, or deletion of your personal data by contacting <a href="mailto:jose.angb4@gmail.com">jose.angb4@gmail.com</a>. You can stop all data collection by uninstalling the application or ceasing website usage.</p>
+
+            <h2>5. Retention and Children</h2>
+            <p>User-provided data is retained for the duration of use plus 12 months thereafter. The Application is not intended for children under 16 years of age without parental consent.</p>
+
+            <p><em>Effective: 2026-10-30</em></p>
+        </div>
     </div>
 </div>
-
-<script>
-    function switchLanguage(lang) {
-        document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-        document.getElementById('content-' + lang).classList.add('active');
-        event.currentTarget.classList.add('active');
-    }
-</script>
 
 </body>
 </html>
