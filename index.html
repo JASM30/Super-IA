@@ -20,25 +20,27 @@
             color: var(--text-main);
             line-height: 1.4;
             margin: 0;
-            padding: 30px 20px;
+            padding: 20px 10px;
         }
         .container {
-            max-width: 1700px;
+            max-width: 1200px;
             margin: 0 auto;
             background-color: var(--container-bg);
-            padding: 40px;
+            padding: 30px 20px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--border-color);
         }
         h1 {
-            font-size: 3.2rem;
+            font-size: 3.2rem; /* Aumentado únicamente el tamaño aquí */
+            font-weight: 800;
             color: #fff;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-align: center;
+            line-height: 1.2;
         }
         .subtitle {
             font-size: 1rem;
@@ -54,7 +56,11 @@
             gap: 30px;
         }
         @media (max-width: 992px) {
-            .grid { grid-template-columns: 1fr; }
+            .grid { grid-template-columns: 1fr; gap: 20px; }
+            body { padding: 10px 5px; }
+            .container { padding: 20px 10px; }
+            .col { padding: 15px 12px !important; } 
+            h1 { font-size: 2.5rem !important; } /* Aumentado únicamente el tamaño en móviles */
         }
         .col {
             background: #1f293750;
@@ -70,7 +76,11 @@
             margin-top: 30px;
         }
         h2:first-of-type { margin-top: 0; }
-        p, li { font-size: 0.95rem; color: var(--text-main); text-align: justify; }
+        p, li { 
+            font-size: 0.95rem; 
+            color: var(--text-main); 
+            text-align: left; 
+        }
         ul { padding-left: 20px; margin-bottom: 15px; }
         li { margin-bottom: 5px; }
         a { color: var(--primary); text-decoration: none; }
@@ -103,7 +113,8 @@
 
             <h2>3. Cookies y Tecnologías de Seguimiento</h2>
             <p>La aplicación o sus SDK de terceros pueden usar cookies, píxeles y tecnologías similares para brindar soporte a la funcionalidad, el análisis o la prestación de servicios. Cuando lo exija la ley aplicable, el proveedor de servicios obtendrá el consentimiento antes de usar tecnologías de seguimiento no esenciales.</p>
-            <h2>4. Sus Derechos</h2>
+
+<h2>4. Sus Derechos</h2>
             <p>Puede solicitar el acceso, la corrección o la eliminación de los datos personales que conserva el Proveedor de servicios. Para ejercer estos derechos, o para retirar el consentimiento cuando el procesamiento se base en él, comuníquese con el Proveedor de servicios en <a href="mailto:jasm30@gmail.com">jasm30@gmail.com</a>.</p>
 
             <h2>5. Sus Derechos de Privacidad en California (CCPA/CPRA)</h2>
